@@ -1,0 +1,137 @@
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100%;
+}
+
+li {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.625rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+p {
+    font-family: sans-serif;
+}
+
+.header {
+    position: relative;
+    background-color: #f7f7f7;
+    height: 100px;
+    width: 100%;
+}
+
+.navbar {
+    position: relative;
+    margin: 20px 25px 20px 25px;
+    padding: 10px 0px 10px 0px;
+    float: right;
+}
+
+.name {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    z-index: 1;
+    float: left;
+    top: 50%;
+    height: 100px;
+    margin-top: -10px;
+    margin-left: 25px;
+}
+
+.menu {
+    list-style-type: none;
+    position: relative;
+    float: right;
+}
+
+.top {
+    display: block;
+    position: relative;
+    height: 300px;
+    background-color: #CE5353
+}
+
+.blurb {
+    font-size: 2em;
+    line-height: 1.3;
+    text-align: center;
+    padding: .5em;
+}
+
+.items {
+    float: left;
+    width: 100%;
+}
+
+.item-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #2284D8;
+}
+
+img {
+    position: relative;
+    max-height: 260px;
+    max-width: 260px;
+}
+
+.item-title-1 {
+    position: relative;
+    float: right;
+    font-size: 30px;
+    text-align: justify;
+    margin-right: 50%;
+    vertical-align: middle;
+}
+
+.about-me {
+    height: 300px;
+    background-color: #A875A9;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 30px 30px 30px 30px;
+}
+
+.container {
+    position: relative;
+    height: auto;
+}
+
+.about_img {
+    position: absolute;
+    right: 50px;
+}
+
+.about-paragraph {
+    float: left;
+    vertical-align: middle;
+    font-size: 20px;
+    width: 80%;
+    margin: 30px 30px 30px 30px;
+}
+
+.icon {
+    margin: 5px;
+    max-height: 40px;
+    max-width: 40px;
+}
