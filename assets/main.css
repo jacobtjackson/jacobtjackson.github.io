@@ -16,6 +16,17 @@ body {
     src: local("Bazar Medium"),
         url(bazar.ttf);
 }
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+img {
+    max-width: 100%;
+    max-width: 100%;
+}
 
 .subMenu {
     display: inline-flex;
@@ -27,6 +38,7 @@ body {
     z-index: 1000;
     font-family: Bazar;
     text-transform: uppercase;
+    position: fixed;
 }
 
 .navbar {
@@ -51,6 +63,14 @@ body {
     color: rgba(230, 39, 57, .33)
 }
 
+.navbar-link:active {
+    color: #f3f3f3;
+}
+
+.active {
+    color: #f3f3f3;
+}
+
 .name {
     font-size: 30px;
     font-weight: 700;
@@ -69,10 +89,6 @@ body {
     width: 100%;
 }
 
-#portfolio {
-    top: -100px;
-}
-
 .blurb {
     font-size: 2em;
     line-height: 1.3;
@@ -81,38 +97,103 @@ body {
 
 .portfolio {
     position: relative;
-    height: 800px;
-    background-color: darkgray;
+    height: 80rem;
+    background-color: ghostwhite;
+    overflow: hidden;
+}
+
+.portfolio-carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 200%
 }
 
 .item-container {
     display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #6ed3cf;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: top;
     width: 100%;
-}
-
-.thumbnail {
-    margin: 50px 100px;
-}
-
-img {
-    max-height: 260px;
-    max-width: 260px;
+    height: 100%;
+    position: absolute;
+    max-width: 
 }
 
 
 .item-title-1 {
-    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3em;
+    letter-spacing: .02;
+    color: #f3f3f3;
+    text-shadow: 1px 1px black;
     max-width: 50%;
-    margin-right: 100px;
+    margin-top: 12rem;
+    margin-left: 5rem;
+    z-index: 1; 
+    opacity: 1;
+}
+
+.description {
+    color: #f3f3f3;
+    text-shadow: 1px 1px black;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    position: relative;
+    margin-left: 5rem;
+    margin-top: -3rem;
+}
+
+.nav {
+    position: absolute;
+    width: 10rem;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav.previous {
+    left: 0;
+    background-image: url(images/arrowLeft.png);
+}
+
+.nav.next {
+    right: 0;
+    background-image: url(images/arrowRight.png);
+}
+
+#dots ul {
+    text-align: center;
+    z-index: 1000;
+}
+
+#dots ul li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 2rem;
+  height: 2rem;
+  background-color: #e8ebd6;
+  border: 1px solid #adb870;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#dots ul li:hover {
+  background-color: #d4dab4;
+}
+
+#dots ul li.active {
+  background-color: #c1c992;
 }
 
 .about-me {
-    height: 800px;
+    height: 80rem;
     background-color: #9068be;
     width: 100%;
+    position: relative;
 }
 
 .container {
@@ -123,35 +204,37 @@ img {
 }
 
 .about_img {
-    right: 50px;
-    top: 30px;
+    right: 5rem;
+    top: 3rem;
     margin: 9% 2rem;
+    max-height: 300px;
+    max-width: 300px;
 }
 
 .about-paragraph {
-    font-size: 20px;
+    font-size: 2rem;
     width: 70%;
     height: 75%;
-    margin: 40px;
+    margin: 4rem;
 }
 
 .footer {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 10rem;
     width: 100%;
     position: static;
     background-color: #e1e8f0;
 }
 
 .icon {
-    max-height: 40px;
-    margin-left: 30px;
+    max-height: 4rem;
+    margin-left: 3rem;
 }
 
 .email {
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 3rem;
 }
 
