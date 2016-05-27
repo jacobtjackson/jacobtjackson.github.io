@@ -137,19 +137,29 @@ var sections = $('section');
 var navigationLinks = $('nav a');
  
 sections.waypoint({
-    handler: function(event, direction) {
-        var active_section;
-        active_section = $(this);
-        if (direction === "up") active_section = active_section.prev();
-
-        var active_link = $('a[href="#' + active_section.attr("class") + '"]');
-        navigationLinks.removeClass("selected");
-        active_link.addClass("selected");
+    handler: function() {
+        var activeSection = $(this.element);
+        console.log($(this.element).attr("id"))
+        var activeLink = $('a[href="#' + activeSection.attr('id') + '"]');
+        navigationLinks.removeClass('active');
+        activeLink.addClass('active');
     },
-    offset: '35%'
+    offset: '-120px'
   });
 
 $(window).load( function() {
+    
+    $('.contact').waypoint({
+        handler: function(direction) {
+            if (direction === "down") {
+                $('.contact').css({
+                    opacity: 1,
+                    transform: 'scaleX(1) translateY(0)'
+                });
+            }
+        },
+        offset: 'bottom-in-view'
+    });
     
     slider();
 
@@ -158,9 +168,10 @@ $(window).load( function() {
     $portfolioContainer.empty();
     
     for (var i = 0; i < slideContent.length; i++) {
-    var $newSlide = buildSlideTemplate(slideContent[i]);
+        var $newSlide = buildSlideTemplate(slideContent[i]);
         $portfolioContainer.append($newSlide);
-        };
+    };
+});
     
     /*var waypointPortfolio = new Waypoint({
         element: $('.portfolio-carousel'),
@@ -188,4 +199,4 @@ $(window).load( function() {
         },
         offset: "-100px"
     });*/
-});
+    
