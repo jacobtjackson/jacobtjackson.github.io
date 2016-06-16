@@ -2,25 +2,25 @@ var slideContent = [
      {
         title: 'Bloc Jams',
         description: 'A music website built using the Bloc curriculum',
-        photoUrl: 'images/blocJamsHomepage.png',
+        photoUrl: 'assets/images/blocJamsHomepage.png',
         projectUrl: 'https://github.com/jacobtjackson/bloc-jams/tree/master'
     },
     {
         title: 'test',
         description: 'a test website to make sure carousel is working',
-        photoUrl: 'images/test.jpg',
+        photoUrl: 'assets/images/test.jpg',
         projectUrl: 'https://www.facebook.com'
     }
 ];
 
-$('.smooth').on('click', function() {
+/*$('.smooth').on('click', function() {
     $.smoothScroll({
         scrollElement: $('body'),
         scrollTarget: '#' + this.id
     });
     
     return false;
-});
+});*/
 
 var buildSlideTemplate = function(slide) {
     var template = 
@@ -139,15 +139,21 @@ var navigationLinks = $('nav a');
 sections.waypoint({
     handler: function() {
         var activeSection = $(this.element);
-        console.log($(this.element).attr("id"))
         var activeLink = $('a[href="#' + activeSection.attr('id') + '"]');
         navigationLinks.removeClass('active');
         activeLink.addClass('active');
     },
-    offset: '-120px'
+    offset: '120px'
   });
 
 $(window).load( function() {
+    
+    sections.waypoint({
+        handler: function() {
+            var activeSection = $(this.element);
+            
+        }
+    })
     
     $('.contact').waypoint({
         handler: function(direction) {

@@ -14,7 +14,7 @@ body {
 @font-face {
     font-family: Bazar;
     src: local("Bazar Medium"),
-        url(bazar.ttf);
+        url(styles/bazar.ttf);
 }
 
 
