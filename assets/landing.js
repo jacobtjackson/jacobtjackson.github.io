@@ -133,27 +133,20 @@ var slider = function() {
 	});
 };
 
-var sections = $('section');
+var anchors = $('a');
 var navigationLinks = $('nav a');
  
-sections.waypoint({
+anchors.waypoint({
     handler: function() {
         var activeSection = $(this.element);
         var activeLink = $('a[href="#' + activeSection.attr('id') + '"]');
         navigationLinks.removeClass('active');
         activeLink.addClass('active');
     },
-    offset: '-110px'
+    offset: "-110px"
   });
 
 $(window).load( function() {
-    
-    sections.waypoint({
-        handler: function() {
-            
-            
-        }
-    })
     
     $('.contact').waypoint({
         handler: function(direction) {
