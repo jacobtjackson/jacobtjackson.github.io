@@ -143,14 +143,14 @@ sections.waypoint({
         navigationLinks.removeClass('active');
         activeLink.addClass('active');
     },
-    offset: '120px'
+    offset: '-110px'
   });
 
 $(window).load( function() {
     
     sections.waypoint({
         handler: function() {
-            var activeSection = $(this.element);
+            
             
         }
     })
