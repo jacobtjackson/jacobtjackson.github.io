@@ -11,10 +11,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-@font-face {
-    font-family: Bazar;
-    src: local("Bazar Medium"),
-        url(styles/bazar.ttf);
+@font-face{
+	font-family:"Bazar";
+	src:url("http://www.myfontfree.com/data/504/b/bazar/Bazar.ttf");
+    font-family: 'Bungee', cursive;
+    font-family: 'Audiowide', cursive;
 }
 
 
@@ -38,7 +39,7 @@ img {
     height: 100px;
     width: 100%;
     z-index: 1000;
-    font-family: Bazar;
+    font-family: Bazar, Bungee, Audiowide;
     text-transform: uppercase;
     position: fixed;
 }
@@ -242,7 +243,7 @@ img {
 
 #contact-me {
     font-size: 3rem;
-    font-family: Bazar;
+    font-family: Bazar, Bungee, Audiowide;
     text-transform: uppercase;
     margin-top: 2rem;
 }
